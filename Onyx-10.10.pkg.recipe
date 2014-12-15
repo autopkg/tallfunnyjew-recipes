@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest Onyx disk image and builds a package.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.pkg.Onyx10.10</string>
+    <string>com.github.tallfunnyjew.pkg.Onyx10.10</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -14,7 +14,7 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.Onyx10.10</string>
+    <string>com.github.tallfunnyjew.download.Onyx10.10</string>
     <key>Process</key>
     <array>
         <dict>
