@@ -8,10 +8,8 @@
     <string>com.github.tallfunnyjew.install.Onyx10.9</string>
     <key>Input</key>
     <dict>
-        <key>DOWNLOAD_URL</key>
-        <string>http://www.titanium.free.fr/download/109/OnyX.dmg</string>
-        <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
+        <key>NAME</key>
+        <string>Onyx</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
