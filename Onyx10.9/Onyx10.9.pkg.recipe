@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest Onyx disk image and builds a package.</string>
+    <string>Downloads the latest version of Onyx for OSX Mavericks and builds a package.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.pkg.Onyx10.9</string>
     <key>Input</key>
