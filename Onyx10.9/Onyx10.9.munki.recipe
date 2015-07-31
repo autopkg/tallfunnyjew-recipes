@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Onyx client for OSX 10.9 and imports into a Munki repo.</string>
+	<string>Downloads the latest client of Onyx for OSX Mavericks and imports into a Munki repo.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.munki.Onyx10.9</string>
 	<key>Input</key>
