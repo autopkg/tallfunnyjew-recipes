@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads and installs the latest Onyx client for OSX Mavericks.</string>
+    <string>Downloads and installs the latest version of Onyx for OSX Mavericks.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.install.Onyx10.9</string>
     <key>Input</key>
