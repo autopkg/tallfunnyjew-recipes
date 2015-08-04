@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest client of Onyx for OSX Mavericks and imports into a Munki repo.</string>
 	<key>Identifier</key>
-	<string>com.github.tallfunnyjew.munki.Onyx10.9</string>
+	<string>com.github.tallfunnyjew.Onyx10.9.munki</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -31,7 +31,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.tallfunnyjew.download.Onyx10.9</string>
+	<string>com.github.tallfunnyjew.Onyx10.9.download</string>
 	<key>Process</key>
 	<array>
 		<dict>
