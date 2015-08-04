@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads and installs latest Onyx client for OSX Yosemite.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.install.Onyx10.10</string>
+    <string>com.github.tallfunnyjew.Onyx10.10.install</string>
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_URL</key>
