@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Onyx for OSX Mavericks and builds a package.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.pkg.Onyx10.9</string>
+    <string>com.github.tallfunnyjew.Onyx10.9.pkg</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -14,7 +14,7 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.tallfunnyjew.download.Onyx10.9</string>
+    <string>com.github.tallfunnyjew.Onyx10.9.download</string>
     <key>Process</key>
     <array>
         <dict>
