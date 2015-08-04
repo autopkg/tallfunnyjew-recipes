@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest client of Onyx for OSX Mavericks and imports into a Munki repo.</string>
+	<string>Downloads the latest Onyx client for OSX Mavericks and imports it into a Munki repo.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.Onyx10.9.munki</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps</string>
+		<string>utilities</string>
 		<key>NAME</key>
 		<string>Onyx</string>
 		<key>pkginfo</key>
@@ -19,7 +19,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>OnyX is a multifunction utility to help clean your Hard Drive and reset many core functions to their most pristine.</string>
+			<string>OnyX is a multifunction utility to help clean and reset your Hard Drive to a pristine state.</string>
 			<key>display_name</key>
 			<string>Onyx for OSX 10.9</string>
 			<key>name</key>
@@ -33,16 +33,18 @@
 	<key>ParentRecipe</key>
 	<string>com.github.tallfunnyjew.Onyx10.9.download</string>
 	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
-			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
-		</dict>
-	</array>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
 </dict>
 </plist>
