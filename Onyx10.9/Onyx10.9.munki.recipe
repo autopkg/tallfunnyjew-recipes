@@ -19,7 +19,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>OnyX is a multifunction utility to help clean and reset your Hard Drive to a pristine state.</string>
+			<string>OnyX is a multifunctional utility for OS X. It allows you to verify the startup disk and the structure of its System files, to run miscellaneous tasks of system maintenance, to configure the hidden parameters of the Finder, Dock, Spotlight, and of some of Apple's own applications, to delete caches, to remove a certain number of files and folders that may become cumbersome, and more.</string>
 			<key>display_name</key>
 			<string>Onyx for OSX 10.9</string>
 			<key>name</key>
