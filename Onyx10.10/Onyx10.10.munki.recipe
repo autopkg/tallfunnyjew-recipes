@@ -3,15 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Onyx client for OSX Yosemite and imports it into a Munki repo.</string>
+	<string>Downloads the latest Onyx client for OSX 10.9 and imports it into a Munki repo.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.Onyx10.10.munki</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>utilities/Onyx</string>
 		<key>NAME</key>
-		<string>Onyx</string>
+        <string>Onyx 2.9</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>utilities</string>
+		<key>APP_DESTINATION</key>
+		<string>/Applications/Utilities</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -26,6 +28,10 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>category</key>
+			<string>OS Utilities</string>
+			<key>developer</key>
+			<string>Titanium</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
