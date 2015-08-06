@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Nike+ Connect</string>
+        <string>NikePlusConnect</string>
         <key>DOWNLOAD_URL</key>
         <string>http://go.nike.com/connectmac_new</string>
     </dict>
