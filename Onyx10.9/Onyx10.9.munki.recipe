@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Onyx client for OSX 10.10 and imports it into a Munki repo.</string>
 	<key>Identifier</key>
-	<string>com.github.tallfunnyjew.Onyx10.9.munki</string>
+	<string>com.github.tallfunnyjew.munki.Onyx109</string>
 	<key>Input</key>
 	<dict>
 	    <key>NAME</key>
