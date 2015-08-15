@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Onyx for OSX Mavericks.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.Onyx10.9.download</string>
+    <string>com.github.tallfunnyjew.download.Onyx109</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
