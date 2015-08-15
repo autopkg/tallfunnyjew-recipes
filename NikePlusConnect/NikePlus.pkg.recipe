@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current Nike+ Connect DMG and extracts the installer package. Please note that this recipe requires multiple inputs as the payload PKG in the DMG download has a different name than the App pkg that's extracted.</string>
+	<key>Identifier</key>
+	<string>com.github.tallfunnyjew.pkg.NikePlus</string>
+ 	<key>Input</key>
+    <dict>
+        <key>PAYLOADNAME</key>
+        <string>Nike+Connect_new</string>
+        <key>APPNAME</key>
+        <string>Nike+ Connect</string>
+    </dict>
+	<key>MinimumVersion</key>
+	<string>0.4.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.tallfunnyjew.download.NikePlus</string>
+	<key>Process</key>
+	<array>
+        <dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>flat_pkg_path</key>
+                <string>%pathname%/*.pkg</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Comment</key>
+			      <string>Payload name is different than App Name, so calling a different variable.</string>
+			      <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack/%PAYLOADNAME%.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
+            </dict>
+        </dict>            
+        <dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%RECIPE_CACHE_DIR%/payload/%APPNAME%.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleGetInfoString</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Comment</key>
+			      <string>App Name is already part of CFBundleGetInfoString so not calling it twice.</string>
+			      <key>Processor</key>
+            <string>PkgCopier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_pkg</key>
+                <string>%pathname%/*.pkg</string>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%version%.pkg</string>
+<!-- 
+                <string>%RECIPE_CACHE_DIR%/%APPNAME%-%version%.pkg</string>
+ -->
+            </dict>
+        </dict>
+        <dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>path_list</key>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
+					<string>%RECIPE_CACHE_DIR%/payload</string>
+				</array>
+			</dict>
+		</dict>    	      	
+	</array>
+</dict>
+</plist>
