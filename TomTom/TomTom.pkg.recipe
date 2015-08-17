@@ -20,6 +20,8 @@
 	<key>Process</key>
 	<array>
         <dict>
+	    <key>Comment</key>
+	    <string>This processor grabs the pkg from inside the downloaded DMG, creates an "unpack" directory in the Cache folder and unpacks the pkg into that directory.</string>
             <key>Processor</key>
             <string>FlatPkgUnpacker</string>
             <key>Arguments</key>
@@ -32,8 +34,8 @@
         </dict>
         <dict>
             <key>Comment</key>
-			<string>Payload name is different than App Name, so calling a different variable.</string>
-			<key>Processor</key>
+	    <string>This processor creates a "payload" directory in the Cache folder and unpacks the payload from the flatpkg into that directory. Here we call the Payload Name input variable from top of recipe.</string>
+	    <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
@@ -44,7 +46,9 @@
             </dict>
         </dict>            
         <dict>
-            <key>Processor</key>
+            <key>Comment</key>
+	    <string>This processor grabs the version # from the info.plist inside the App bundle. Here we call the AppName input variable from top of recipe.</string>
+	    <key>Processor</key>
             <string>Versioner</string>
             <key>Arguments</key>
             <dict>
@@ -55,7 +59,9 @@
             </dict>
         </dict>
         <dict>
-			<key>Processor</key>
+            <key>Comment</key>
+	    <string>This processor calls App Name and version & renames the App based on those.</string>
+	    <key>Processor</key>
             <string>PkgCopier</string>
             <key>Arguments</key>
             <dict>
@@ -66,11 +72,13 @@
             </dict>
         </dict>
         <dict>
-			<key>Processor</key>
-			<string>PathDeleter</string>
-			<key>Arguments</key>
-			<dict>
-				<key>path_list</key>
+		<key>Comment</key>
+		<string>This processor deletes the "unpack" and "payload" directories we just created.</string>
+		<key>Processor</key>
+		<string>PathDeleter</string>
+		<key>Arguments</key>
+		<dict>
+			<key>path_list</key>
 				<array>
 					<string>%RECIPE_CACHE_DIR%/unpack</string>
 					<string>%RECIPE_CACHE_DIR%/payload</string>
