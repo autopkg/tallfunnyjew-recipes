@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current Nike+ Connect DMG, then extracts the installer package. PLEASE NOTE: because the payload pkg name is different than the App pkg name that's extracted, I'm using two inputs (found at top of recipe) and then calling them in processors further down in the recipe.</string>
+	<string>Downloads the latest Nike+ Connect installer DMG, extracts the version info from the embedded PKG and then copies over and renames the installer. NOTE: as the payload pkg and the app name are different, we use two input variables at the top of this recipe and call them in their respective processors.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.pkg.NikePlus</string>
  	<key>Input</key>
@@ -20,17 +20,17 @@
 	<key>Process</key>
 	<array>
         <dict>
-            <key>Comment</key>
-			<string>This processor grabs the pkg from inside the downloaded DMG, creates an "unpack" directory in the Cache folder and unpacks the pkg into that directory.</string><key>Processor</key>
-            <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>flat_pkg_path</key>
-                <string>%pathname%/*.pkg</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack</string>
-            </dict>
+			<key>Comment</key>
+			<string>This processor grabs the pkg from inside the downloaded DMG, creates an "unpack" directory in the Cache folder and unpacks the pkg into that directory.</string>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+			<key>Arguments</key>
+				<dict>
+					<key>flat_pkg_path</key>
+					<string>%pathname%/*.pkg</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
+				</dict>
         </dict>
         <dict>
             <key>Comment</key>
@@ -60,7 +60,7 @@
         </dict>
         <dict>
             <key>Comment</key>
-			<string>Normally this processor calls App Name and version. However, CFBundleGetInfoString already calls those both, so commenting out normal processor call.</string>
+			<string>Normally this processor renames the installer with both the App Name and version. However, CFBundleGetInfoString in this app already has those data.</string>
 			<key>Processor</key>
             <string>PkgCopier</string>
             <key>Arguments</key>
@@ -69,9 +69,6 @@
                 <string>%pathname%/*.pkg</string>
                 <key>pkg_path</key>
                 <string>%RECIPE_CACHE_DIR%/%version%.pkg</string>
-<!-- 
-                <string>%RECIPE_CACHE_DIR%/%APPNAME%-%version%.pkg</string>
- -->
             </dict>
         </dict>
         <dict>
