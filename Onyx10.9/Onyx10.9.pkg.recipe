@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Onyx for OSX Mavericks and builds a package.</string>
+    <string>Downloads the latest version of Onyx for OSX 10.9 Mavericks and builds a package.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.pkg.Onyx109</string>
     <key>Input</key>
@@ -18,6 +18,8 @@
     <key>Process</key>
     <array>
         <dict>
+            <key>Comment</key>
+			<string>This processor grabs two pieces of info from the app inside of a downloaded DMG: the version and bundle ID. We just need to tell it where to look for that DMG.</string>
             <key>Processor</key>
             <string>AppDmgVersioner</string>
             <key>Arguments</key>
@@ -27,6 +29,8 @@
             </dict>
         </dict>
         <dict>
+            <key>Comment</key>
+			<string>This processor creates any directory we'll need in later steps to create a pkg that installs the final product into the correct locations.</string>
             <key>Processor</key>
             <string>PkgRootCreator</string>
             <key>Arguments</key>
@@ -41,6 +45,8 @@
             </dict>
         </dict>
         <dict>
+            <key>Comment</key>
+			<string>This processor copies the App from the download and into the pkg root directory we created in the previous step.</string>
             <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
@@ -52,6 +58,8 @@
             </dict>
         </dict>
         <dict>
+            <key>Comment</key>
+			<string>This processor creates a pkg from the pkg root directory, names the pkg with the app name and version and more. For details, see https://github.com/autopkg/autopkg/blob/master/Code/autopkgserver/autopkgserver.</string>
             <key>Processor</key>
             <string>PkgCreator</string>
             <key>Arguments</key>
@@ -64,7 +72,7 @@
                     <string>%version%</string>
                     <key>id</key>
                     <string>%bundleid%</string>
-                     <key>options</key>
+                    <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
                     <array>
