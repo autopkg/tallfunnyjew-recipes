@@ -60,7 +60,7 @@
         </dict>
         <dict>
             <key>Comment</key>
-	    <string>This processor calls App Name and version & renames the App based on those.</string>
+	    <string>This processor calls App Name and version and renames the App based on those.</string>
 	    <key>Processor</key>
             <string>PkgCopier</string>
             <key>Arguments</key>
