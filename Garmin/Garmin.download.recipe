@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest Garmin Express Software for OSX.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.download.GarminExpress</string>
+    <string>com.github.tallfunnyjew.download.Garmin</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
