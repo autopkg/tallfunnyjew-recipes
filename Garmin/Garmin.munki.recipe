@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Garmin Express.app for OSX and imports into a Munki repo.</string>
 	<key>Identifier</key>
-	<string>com.github.tallfunnyjew.munki.GarminExpress</string>
+	<string>com.github.tallfunnyjew.munki.Garmin</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -31,7 +31,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.tallfunnyjew.download.GarminExpress</string>
+	<string>com.github.tallfunnyjew.download.Garmin</string>
 	<key>Process</key>
 	<array>
 		<dict>
