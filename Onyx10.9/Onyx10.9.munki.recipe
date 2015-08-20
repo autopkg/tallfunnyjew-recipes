@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 	    <key>NAME</key>
-        <string>Onyx 2.8</string>
+        <string>Onyx</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>utilities</string>
 		<key>APP_DESTINATION</key>
@@ -29,7 +29,7 @@
 			<key>unattended_install</key>
 			<true/>
 			<key>category</key>
-			<string>OS Utilities</string>
+			<string>OSX Utilities</string>
 			<key>developer</key>
 			<string>Titanium</string>
 		</dict>
