@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>ccom.github.tallfunnyjew.download.Onyx109</string>
+	<string>com.github.tallfunnyjew.download.Onyx109</string>
 	<key>Process</key>
     <array>
         <dict>
