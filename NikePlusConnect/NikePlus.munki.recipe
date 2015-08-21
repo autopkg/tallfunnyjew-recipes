@@ -39,8 +39,12 @@
 	<key>ParentRecipe</key>
 	<string>com.github.tallfunnyjew.pkg.NikePlus</string>
 	<key>Process</key>
-    <array>
+    <<array>
         <dict>
+            <key>Comment</key>
+	    <string>This processor imports the final pkg into the location specified in the INPUT string at top of recipe.</string>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
             <key>Arguments</key>
             <dict>
                 <key>pkg_path</key>
@@ -48,8 +52,6 @@
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
             </dict>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
         </dict>
     </array>
 </dict>
