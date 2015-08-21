@@ -11,7 +11,7 @@
 		<key>NAME</key>
         <string>Nike+ Connect</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>Apps</string>
+        <string>Apps/Nike</string>
 		<key>APP_DESTINATION</key>
 		<string>/Applications</string>
 		<key>pkginfo</key>
