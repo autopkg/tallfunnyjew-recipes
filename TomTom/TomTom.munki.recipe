@@ -11,7 +11,7 @@
 		<key>NAME</key>
         <string>Tom Tom MySports</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>Apps/TomTom</string>
+        <string>apps/TomTom</string>
 		<key>APP_DESTINATION</key>
 		<string>/Applications</string>
 		<key>pkginfo</key>
