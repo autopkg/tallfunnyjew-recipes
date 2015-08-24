@@ -39,7 +39,7 @@
 	<key>ParentRecipe</key>
 	<string>com.github.tallfunnyjew.pkg.NikePlus</string>
 	<key>Process</key>
-    <<array>
+    <array>
         <dict>
             <key>Comment</key>
 	    <string>This processor imports the final pkg into the location specified in the INPUT string at top of recipe.</string>
