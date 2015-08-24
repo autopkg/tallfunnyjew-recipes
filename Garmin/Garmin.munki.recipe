@@ -8,7 +8,7 @@
 	<string>com.github.tallfunnyjew.munki.Garmin</string>
 	<key>Input</key>
 	<dict>
-		<<key>NAME</key>
+		<key>NAME</key>
 		<string>Garmin Express</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/Garmin</string>
