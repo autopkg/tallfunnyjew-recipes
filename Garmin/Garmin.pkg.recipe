@@ -60,7 +60,7 @@
         </dict>
         <dict>
             <key>Comment</key>
-			<string>Normally this processor renames the installer with both the App Name and version. However, CFBundleGetInfoString in this app already has those data.</string>
+			<string>Renames the installer with both the App Name and version.</string>
 			<key>Processor</key>
             <string>PkgCopier</string>
             <key>Arguments</key>
