@@ -55,12 +55,12 @@
                 <key>input_plist_path</key>
                 <string>%RECIPE_CACHE_DIR%/payload/%APPNAME%.app/Contents/Info.plist</string>
                 <key>plist_version_key</key>
-                <string>CFBundleGetInfoString</string>
+                <string>CFBundleShortVersionString</string>
             </dict>
         </dict>
         <dict>
             <key>Comment</key>
-			<string>Normally this processor renames the installer with both the App Name and version. However, CFBundleGetInfoString in this app already has those data.</string>
+			<string>Renames the installer with both the App Name and version.</string>
 			<key>Processor</key>
             <string>PkgCopier</string>
             <key>Arguments</key>
@@ -68,7 +68,7 @@
                 <key>source_pkg</key>
                 <string>%pathname%/*.pkg</string>
                 <key>pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/%version%.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/%APPNAME%-%version%.pkg</string>
             </dict>
         </dict>
         <dict>
