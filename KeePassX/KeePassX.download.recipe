@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest version of KeePassX.</string>
+    <key>Identifier</key>
+    <string>com.github.tallfunnyjew.download.KeePassX</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>KeePassX</string>
+		</dict>
+	<key>MinimumVersion</key>
+	<string>0.4.2</string>
+	<key>Process</key>
+	<array>
+		<dict>
+		<key>Processor</key>
+		<string>URLTextSearcher</string>
+		<key>Comment</key>
+		<string>This processor permits downloading a URL with variables. Convenient if version numbers are in the name of the download but change over time.</string>
+		<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://www.keepassx.org/downloads</string>
+				<key>Comment</key>
+				<string>The URL key calls the page where the download is found.</string>
+				<key>re_pattern</key>
+				<string>(/releases/KeePassX-[0-9].[0-9].[0-9].dmg)</string>
+				<key>Comment</key>
+				<string>The re_pattern calls the variables the file might be called.</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.keepassx.org/%url%</string>
+                <key>filename</key>
+                <string>%NAME%.dmg</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
