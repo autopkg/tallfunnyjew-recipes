@@ -11,7 +11,7 @@
         <key>PAYLOADNAME</key>
         <string>Nike+Connect_new</string>
         <key>APPNAME</key>
-        <string>Nike+ Connect</string>
+        <string>NikePlusConnect</string>
     </dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
