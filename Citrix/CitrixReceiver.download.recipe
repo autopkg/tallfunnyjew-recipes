@@ -3,37 +3,35 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of KeePassX.</string>
+    <string>Downloads the latest version of Citrix Receiver.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.download.KeePassX</string>
+    <string>com.github.tallfunnyjew.download.CitrixReceiver</string>
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
-			<string>KeePassX</string>
+			<string>CitrixReceiver</string>
 		</dict>
 	<key>MinimumVersion</key>
-	<string>0.4.2</string>
+	<string>0.5.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
 		<key>Processor</key>
 		<string>URLTextSearcher</string>
 		<key>Comment</key>
-		<string>This processor permits downloading a URL with variables. Convenient if version numbers are in the name of the download but change over time.</string>
+		<string>This processor permits downloading a URL with variables. Convenient if version numbers are in the name of the download and change over time.</string>
 		<key>Arguments</key>
 			<dict>
+				<key>Comment</key>
+				<string>First, call the URL where the download is found.</string>
 				<key>url</key>
-				<string>https://www.keepassx.org/downloads</string>
+				<string>http://www.citrix.com/downloads/citrix-receiver.html</string>
 				<key>Comment</key>
-				<string>The URL key calls the page where the download is found.</string>
+				<string>Now, use a regular expression pattern to account for variables in the item name.</string>
 				<key>re_pattern</key>
-				<string>(/releases/KeePassX-[0-9].[0-9].[0-9].dmg)</string>
-				<key>Comment</key>
-				<string>The re_pattern calls the variables the file might be called.</string>
+				<string>(downloads/citrix-receiver/mac/receiver-for-mac-[0-9][0-9][0-9].html)</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
-				<key>Comment</key>
-				<string>http://www.keepassx.org/releases/KeePassX-0.4.3.dmg</string>
 			</dict>
 		</dict>
         <dict>
@@ -42,7 +40,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://www.keepassx.org/%url%</string>
+                <string>http://www.citrix.com/%url%#ctx-dl-eula</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
