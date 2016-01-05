@@ -2,48 +2,46 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Description</key>
+    <key>Description</key>
 	<string>Downloads the latest OS drivers for Evolis Dualys3 Printer.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.download.EvolisDualys3</string>
-	<key>Input</key>
-	<dict>
-		<key>NAME</key>
-		<string>EvolisDualys3</string>
-		<key>DOWNLOAD_URL</key>
-		<string>http://us.evolis.com/sites/default/files/atoms/files/evoliscardprinter-4.13.49.26.pkg_.zip</string>
-	</dict>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>EvolisDualys3</string>
+    </dict>
     <key>MinimumVersion</key>
-    <string>0.5.1</string>
+    <string>0.3.1</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://us.evolis.com/drivers-support/drivers-dualys-3-card-printer</string>
+                <key>re_pattern</key>
+                <string>(?P&lt;url&gt;http://us.evolis.com/sites/default/files/atoms/files/evoliscardprinter-.*?.zip)</string>
+			</dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-                <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
                 <key>filename</key>
                 <string>%NAME%.zip</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>EndOfCheckPhase</string>
+            <string>Unarchiver</string>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Unarchiver</string>
-            <key>Arguments</key>
-            <dict>
-                <key>archive_path</key>
-                <string>%pathname%</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
-                <key>purge_destination</key>
-                <true/>
-            </dict>
+            <string>EndOfCheckPhase</string>
         </dict>
     </array>
 </dict>
