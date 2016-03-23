@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+	<string>Downloads the latest Logitech Harmony software OSX.</string>
+	<key>Identifier</key>
+	<string>com.github.tallfunnyjew.download.MusicBrainzPicard</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>MusicBrainzPicard</string>
+    </dict>
+    <key>Comment</key>
+	<string>Sets the minimum version of autopkg</string>
+	<key>MinimumVersion</key>
+    <string>0.6.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+			<key>Comment</key>
+			<string>Locate a URL with a changing name. Perfect for software downloads.</string>
+			<key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://picard.musicbrainz.org/</string>
+                <key>re_pattern</key>
+                <string>(?P&lt;url&gt;ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-.*?.dmg)</string>
+			</dict>
+        </dict>
+        <dict>
+			<key>Comment</key>
+			<string>Download the file from the URLTextSearch and name it with the 'INPUT' variable from above.</string>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>filename</key>
+                <string>%NAME%.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Comment</key>
+			<string>This processor grabs the name, version and bundle ID from inside of a DMG. We just need to tell it where to look for that DMG.</string>
+            <key>Processor</key>
+            <string>AppDmgVersioner</string>
+            <key>Arguments</key>
+            <dict>
+                <key>dmg_path</key>
+                <string>%pathname%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Comment</key>
+			<string>Rename the dmg to include version number, captured in previous step.</string>
+            <key>Processor</key>
+            <string>FileMover</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
+                <key>target</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
