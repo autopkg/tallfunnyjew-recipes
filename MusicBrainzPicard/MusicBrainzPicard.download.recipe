@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-	<string>Downloads the latest Logitech Harmony software OSX.</string>
+	<string>Downloads the latest MusicBrainz Picard software.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.download.MusicBrainzPicard</string>
     <key>Input</key>
