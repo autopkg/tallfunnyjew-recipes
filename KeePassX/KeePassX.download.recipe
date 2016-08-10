@@ -23,17 +23,15 @@
 		<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.keepassx.org/downloads</string>
+				<string>https://www.keepassx.org/downloads/</string>
 				<key>Comment</key>
-				<string>The URL key calls the page where the download is found.</string>
+				<string>The URL value calls the page where the download is found.</string>
 				<key>re_pattern</key>
-				<string>(/releases/KeePassX-[0-9].[0-9].[0-9].dmg)</string>
+				<string>"latest_version"&gt;Latest version: ([\d\.]+)&lt;</string>
 				<key>Comment</key>
-				<string>The re_pattern calls the variables the file might be called.</string>
+				<string>The re_pattern calls the variables as mentioned in the HTML code.</string>
 				<key>result_output_var_name</key>
-				<string>url</string>
-				<key>Comment</key>
-				<string>http://www.keepassx.org/releases/KeePassX-0.4.3.dmg</string>
+				<string>version</string>
 			</dict>
 		</dict>
         <dict>
@@ -42,7 +40,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://www.keepassx.org/%url%</string>
+                <string>https://www.keepassx.org/%version%/KeePassX-%version%.dmg</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
