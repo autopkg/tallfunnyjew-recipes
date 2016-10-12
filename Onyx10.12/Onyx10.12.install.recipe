@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads & installs the latest Onyx.app for MacOS Sierra.</string>
+    <string>Downloads and installs the latest Onyx.app for MacOS Sierra.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.install.Onyx1012</string>
     <key>Input</key>
