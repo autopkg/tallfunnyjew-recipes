@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>NameMangler</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://manytricks.com/download/namemangler</string>
+        <string>https://manytricks.com/download/namemangler</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
