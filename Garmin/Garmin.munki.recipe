@@ -37,12 +37,10 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.tallfunnyjew.download.Garmin</string>
+	<string>com.github.tallfunnyjew.pkg.Garmin</string>
 	<key>Process</key>
 	<array>
         <dict>
-            <key>Comment</key>
-	    <string>This processor imports the final pkg into the location specified in the INPUT string at top of recipe.</string>
             <key>Processor</key>
             <string>MunkiImporter</string>
             <key>Arguments</key>
