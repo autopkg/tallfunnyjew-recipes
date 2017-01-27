@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Onyx client for OSX 10.9 and imports it into a Munki repo.</string>
+	<string>Downloads the latest Onyx client for Mac OS 10.10 Yosemite and imports it into a Munki repo.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.munki.Onyx1010</string>
 	<key>Input</key>
@@ -35,7 +35,7 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.4.0</string>
+    <string>1.0.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.tallfunnyjew.download.Onyx1010</string>
 	<key>Process</key>

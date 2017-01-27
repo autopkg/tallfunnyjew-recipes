@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Onyx.app for MacOS Sierra.</string>
+    <string>Downloads the latest Onyx client for MacOS 10.12 Sierra.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.download.Onyx1012</string>
     <key>Input</key>
@@ -11,10 +11,10 @@
         <key>NAME</key>
         <string>Onyx</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://www.titanium.free.fr/download/1012/OnyX.dmg</string>
+        <string>http://joel.barriere.pagesperso-orange.fr/download/1012/OnyX.dmg</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>1.0.1</string>
     <key>Process</key>
     <array>
         <dict>

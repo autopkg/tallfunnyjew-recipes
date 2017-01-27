@@ -3,15 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Onyx client for OSX 10.11 El Capitan.</string>
-    <key>Identifier</key>
-    <string>com.github.tallfunnyjew.download.Onyx1011</string>
+	<string>Downloads the latest MakeMKV version for Mac OS.</string>
+	<key>Identifier</key>
+	<string>com.github.tallfunnyjew.download.MakeMKV</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Onyx</string>
-        <key>DOWNLOAD_URL</key>
-        <string>http://joel.barriere.pagesperso-orange.fr/download/1011/OnyX.dmg</string>
+        <string>MakeMKV</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>
@@ -19,11 +17,20 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>URLDownloader</string>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
+                <string>http://www.makemkv.com/download/</string>
+                <key>re_pattern</key>
+                <string>(?P&lt;url&gt;http://www.makemkv.com/download/.*?.dmg)</string>
+			</dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>

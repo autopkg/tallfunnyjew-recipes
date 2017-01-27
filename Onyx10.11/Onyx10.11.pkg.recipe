@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Onyx for OSX El Capitan and builds a package.</string>
+    <string>Downloads the latest version of Onyx for MacOS 10.11 El Capitan and builds a PKG.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.pkg.Onyx1011</string>
     <key>Input</key>
@@ -12,7 +12,7 @@
         <string>Onyx</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>1.0.1</string>
     <key>ParentRecipe</key>
     <string>com.github.tallfunnyjew.download.Onyx1011</string>
     <key>Process</key>

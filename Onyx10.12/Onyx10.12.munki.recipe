@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Onyx.app for MacOS Sierra and imports it into a Munki repo.</string>
+	<string>Downloads the latest Onyx client for Mac OS 10.12 Sierra and imports it into a Munki repo.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.munki.Onyx1012</string>
 	<key>Input</key>
@@ -29,7 +29,7 @@
 			<key>developer</key>
 			<string>Titanium</string>
 			<key>display_name</key>
-			<string>Onyx for OSX 10.12</string>
+			<string>Onyx for MacOS 10.12</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -37,7 +37,7 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.4.0</string>
+    <string>1.0.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.tallfunnyjew.download.Onyx1012</string>
 	<key>Process</key>

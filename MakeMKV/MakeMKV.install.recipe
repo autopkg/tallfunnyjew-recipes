@@ -3,20 +3,14 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads and installs latest Onyx client for Mac OS 10.10 Yosemite.</string>
+    <string>Downloads the latest DMG of MakeMKV for OSX and installs.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.install.Onyx1010</string>
+    <string>com.github.tallfunnyjew.install.MakeMKV</string>
     <key>Input</key>
-    <dict>
-        <key>DOWNLOAD_URL</key>
-        <string>http://www.titanium.free.fr/download/1010/OnyX.dmg</string>
-        <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
-    </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>
     <key>ParentRecipe</key>
-    <string>com.github.tallfunnyjew.download.Onyx1010</string>
+    <string>com.github.tallfunnyjew.download.MakeMKV</string>
     <key>Process</key>
     <array>
         <dict>
@@ -30,7 +24,7 @@
                 <array>
                     <dict>
                         <key>source_item</key>
-                        <string>Onyx.app</string>
+                        <string>MakeMKV.app</string>
                         <key>destination_path</key>
                         <string>/Applications/</string>
                     </dict>

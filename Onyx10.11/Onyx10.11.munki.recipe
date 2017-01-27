@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Onyx.app for MacOS Sierra and imports it into a Munki repo.</string>
+	<string>Downloads the latest Onyx client for MacOS 10.11 El Capitan and imports it into a Munki repo.</string>
 	<key>Identifier</key>
-	<string>com.github.tallfunnyjew.munki.Onyx1012</string>
+	<string>com.github.tallfunnyjew.munki.Onyx1011</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_DESTINATION</key>
@@ -13,7 +13,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>global/apps/Onyx</string>
 		<key>NAME</key>
-		<string>Onyx12</string>
+		<string>Onyx11</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -25,11 +25,11 @@
 			<key>description</key>
 			<string>OnyX is a multifunctional utility for OS X. It allows you to verify the startup disk and the structure of its System files, to run miscellaneous tasks of system maintenance, to configure the hidden parameters of the Finder, Dock, Spotlight, and of some of Apple's own applications, to delete caches, to remove a certain number of files and folders that may become cumbersome, and more.
 &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
-&amp;lt;img src="http://www.titanium.free.fr/images/icons/onyx1012.png"&amp;gt;</string>
+&amp;lt;img src="http://www.titanium.free.fr/images/icons/onyx1011.png"&amp;gt;</string>
 			<key>developer</key>
 			<string>Titanium</string>
 			<key>display_name</key>
-			<string>Onyx for OSX 10.12</string>
+			<string>Onyx for MacOS 10.11</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -37,9 +37,9 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.4.0</string>
+    <string>1.0.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.tallfunnyjew.download.Onyx1012</string>
+	<string>com.github.tallfunnyjew.download.Onyx1011</string>
 	<key>Process</key>
 	<array>
 		<dict>
