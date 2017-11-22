@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>http://www.makemkv.com/download/</string>
                 <key>re_pattern</key>
-                <string>(?P&lt;url&gt;http://www.makemkv.com/download/.*?.dmg)</string>
+                <string>(download/.*?.dmg)</string>
 			</dict>
         </dict>
         <dict>
@@ -31,6 +31,8 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
+                <key>url</key>
+                <string>http://www.makemkv.com/%match%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
