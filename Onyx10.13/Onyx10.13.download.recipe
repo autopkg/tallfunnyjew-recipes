@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Onyx client for MacOS 10.12.</string>
+    <string>Downloads the latest Onyx client for MacOS 10.13.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.download.Onyx1012</string>
+    <string>com.github.tallfunnyjew.download.Onyx1013</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>Onyx</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://www.titanium-software.fr/download/1012/OnyX.dmg</string>
+        <string>https://www.titanium-software.fr/download/1013/OnyX.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>

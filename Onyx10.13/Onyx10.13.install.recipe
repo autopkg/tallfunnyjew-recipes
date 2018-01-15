@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Onyx client for MacOS 10.12, builds a .pkg and then installs it.</string>
+    <string>Downloads the latest Onyx client for MacOS 10.13, builds a .pkg and then installs it.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.install.Onyx1012</string>
+    <string>com.github.tallfunnyjew.install.Onyx1013</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -14,7 +14,7 @@
     <key>MinimumVersion</key>
     <string>1.0.1</string>
     <key>ParentRecipe</key>
-    <string>com.github.tallfunnyjew.pkg.Onyx1012</string>
+    <string>com.github.tallfunnyjew.pkg.Onyx1013</string>
     <key>Process</key>
     <array>
         <dict>
