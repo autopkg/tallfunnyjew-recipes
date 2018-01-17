@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Onyx for OSX Mavericks.</string>
+    <string>Downloads the latest Onyx client for macOS 10.9.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.download.Onyx109</string>
     <key>Input</key>
@@ -11,10 +11,10 @@
         <key>NAME</key>
         <string>Onyx</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://www.titanium.free.fr/download/109/OnyX.dmg</string>
+        <string>https://www.titanium-software.fr/download/109/OnyX.dmg</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>1.0.1</string>
     <key>Process</key>
     <array>
         <dict>

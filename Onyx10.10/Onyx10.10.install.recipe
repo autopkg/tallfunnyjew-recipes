@@ -3,39 +3,23 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads and installs latest Onyx client for Mac OS 10.10 Yosemite.</string>
+    <string>Downloads the latest Onyx client for macOS 10.10, builds a .pkg and then installs it.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.install.Onyx1010</string>
     <key>Input</key>
     <dict>
-        <key>DOWNLOAD_URL</key>
-        <string>http://www.titanium.free.fr/download/1010/OnyX.dmg</string>
-        <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
+        <key>NAME</key>
+        <string>Onyx</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>
     <key>ParentRecipe</key>
-    <string>com.github.tallfunnyjew.download.Onyx1010</string>
+    <string>com.github.tallfunnyjew.pkg.Onyx1010</string>
     <key>Process</key>
     <array>
         <dict>
             <key>Processor</key>
-            <string>InstallFromDMG</string>
-            <key>Arguments</key>
-            <dict>
-                <key>dmg_path</key>
-                <string>%pathname%</string>
-                <key>items_to_copy</key>
-                <array>
-                    <dict>
-                        <key>source_item</key>
-                        <string>Onyx.app</string>
-                        <key>destination_path</key>
-                        <string>/Applications/</string>
-                    </dict>
-                </array>
-            </dict>
+            <string>Installer</string>
         </dict>
     </array>
 </dict>

@@ -24,8 +24,6 @@
                 <string>http://www.makemkv.com/download/</string>
                 <key>re_pattern</key>
                 <string>(download/.*?.dmg)</string>
-			</dict>
-        </dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>

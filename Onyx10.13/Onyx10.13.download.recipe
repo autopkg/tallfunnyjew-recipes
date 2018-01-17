@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Garmin Express Software for OSX.</string>
+    <string>Downloads the latest Onyx client for macOS 10.13.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.download.Garmin</string>
+    <string>com.github.tallfunnyjew.download.Onyx1013</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>GarminExpress</string>
+        <string>Onyx</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://download.garmin.com/omt/express/B/GarminExpressInstaller.dmg</string>
+        <string>https://www.titanium-software.fr/download/1013/OnyX.dmg</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.6.1</string>
+    <string>1.0.1</string>
     <key>Process</key>
     <array>
         <dict>
@@ -32,21 +32,6 @@
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
-		<dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_path</key>
-				<string>%pathname%/*.pkg</string>
-				<key>requirement</key>
-				<array>
-					<string>Developer ID Installer: Garmin International</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
-				</array>
-			</dict>
-		</dict>
     </array>
 </dict>
 </plist>
