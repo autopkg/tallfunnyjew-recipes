@@ -15,30 +15,22 @@
     <string>1.0.1</string>
     <key>Process</key>
     <array>
-		<dict>
-		<key>Processor</key>
-		<string>URLTextSearcher</string>
-		<key>Comment</key>
-		<string>Downloads a URL with variables. Perfect if version numbers change over time.</string>
-		<key>Arguments</key>
-			<dict>
-				<key>Comment</key>
-				<string>First, call the URL where the download is found.</string>
-				<key>url</key>
-				<string>http://www.makemkv.com/download/</string>
-				<key>Comment</key>
-				<string>Use a regex pattern to account for variables in the item name.</string>
-				<key>re_pattern</key>
-				<string>&lt;a href="(?P&lt;url&gt;http://.*/makemkv.*\.dmg)"&gt;</string>
-				<key>Comment</key>
-				<string> actual URL is http://www.makemkv.com/download/makemkv_v1.10.9_osx.dmg</string>
-			</dict>
-		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://www.makemkv.com/download/</string>
+                <key>re_pattern</key>
+                <string>(download/.*?.dmg)</string>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
+                <key>url</key>
+                <string>http://www.makemkv.com/%match%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
