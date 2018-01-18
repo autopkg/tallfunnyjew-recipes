@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-	<string>Downloads the latest MakeMKV version for Mac OS.</string>
+	<string>Downloads the latest MakeMKV BETA version for macOS.</string>
+	<key>Comment</key>
+	<string>Thanks to Eric Holtam for regex help!</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.download.MakeMKV</string>
     <key>Input</key>
@@ -23,7 +25,9 @@
                 <key>url</key>
                 <string>http://www.makemkv.com/download/</string>
                 <key>re_pattern</key>
-                <string>(download/.*?.dmg)</string>
+                <string>(download\/makemkv_v[\d.]*_osx\.dmg)</string>
+        	</dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
