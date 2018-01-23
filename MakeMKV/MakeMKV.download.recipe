@@ -4,10 +4,10 @@
 <dict>
     <key>Description</key>
 	<string>Downloads the latest MakeMKV BETA version for macOS.</string>
-	<key>Comment</key>
-	<string>Thanks to Eric Holtam for regex help!</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.download.MakeMKV</string>
+	<key>Comment</key>
+	<string>Thanks so much to Eric Holtam for his regex help</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
