@@ -6,6 +6,8 @@
     <string>Downloads the latest MakeMKV BETA client for macOS and builds a .pkg</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.pkg.MakeMKV</string>
+    <key>Comment</key>
+    <string>Thanks so much to Eric Holtam for his regex help</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
