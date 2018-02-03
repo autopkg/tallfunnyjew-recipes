@@ -3,27 +3,29 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-	<string>Downloads the latest OS drivers for Evolis Dualys3 Printer.</string>
+	<string>Downloads the latest macOS drivers for the Evolis Primacy Printer.</string>
 	<key>Identifier</key>
-	<string>com.github.tallfunnyjew.download.EvolisDualys3</string>
+	<string>com.github.tallfunnyjew.download.EvolisPrimacy</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>EvolisDualys3</string>
+        <string>EvolisPrimacy</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.3.1</string>
+    <string>1.0.1</string>
     <key>Process</key>
     <array>
         <dict>
-            <key>Processor</key>
+			<key>Processor</key>
             <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://us.evolis.com/drivers-support/drivers-dualys-3-card-printer</string>
+                <string>http://us.evolis.com/drivers-support/drivers-primacy-card-printer</string>
                 <key>re_pattern</key>
-                <string>(?P&lt;url&gt;http://us.evolis.com/sites/default/files/atoms/files/evoliscardprinter-.*?.zip)</string>
+                <string>(https:\/\/us\.evolis\.com\/sites\/default\/files\/atoms\/files\/evolisprinterdriver-[\d.]*.pkg_.zip)</string>
+                <key>result_output_var_name</key>
+				<string>download</string>
 			</dict>
         </dict>
         <dict>
@@ -31,13 +33,22 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-                <key>filename</key>
-                <string>%NAME%.zip</string>
+                <key>url</key>
+				<string>%download%</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
             <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
         </dict>
         <dict>
             <key>Processor</key>

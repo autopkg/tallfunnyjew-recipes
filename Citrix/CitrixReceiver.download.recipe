@@ -12,24 +12,18 @@
 			<string>CitrixReceiver</string>
 		</dict>
 	<key>MinimumVersion</key>
-	<string>0.5.1</string>
+	<string>1.0.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
 		<key>Processor</key>
 		<string>URLTextSearcher</string>
-		<key>Comment</key>
-		<string>This processor permits downloading a URL with variables. Convenient if version numbers are in the name of the download and change over time.</string>
 		<key>Arguments</key>
 			<dict>
-				<key>Comment</key>
-				<string>First, call the URL where the download is found.</string>
 				<key>url</key>
-				<string>http://www.citrix.com/downloads/citrix-receiver.html</string>
-				<key>Comment</key>
-				<string>Now, use a regular expression pattern to account for variables in the item name.</string>
+				<string>https://www.citrix.com/downloads/citrix-receiver/mac/receiver-for-mac-latest.html</string>
 				<key>re_pattern</key>
-				<string>(downloads/citrix-receiver/mac/receiver-for-mac-[0-9][0-9][0-9].html)</string>
+				<string>(https\:\/\/downloads\.citrix\.com\/[\d]*\/CitrixReceiver\.dmg\?__gda__\=[\w]*)</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
 			</dict>
@@ -40,7 +34,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.citrix.com/%url%#ctx-dl-eula</string>
+                <string>%URL%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>

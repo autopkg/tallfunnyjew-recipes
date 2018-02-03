@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest OS drivers for Evolis Dualys2 Printer.</string>
+	<string>Downloads the latest macOS drivers for the Evolis Dualys2 Printer.</string>
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.download.EvolisDualys2</string>
 	<key>Input</key>
@@ -11,10 +11,10 @@
 		<key>NAME</key>
 		<string>EvolisDualys2</string>
 		<key>DOWNLOAD_URL</key>
-		<string>http://us.evolis.com/sites/default/files/drivers/11267_187671_EvolisCardPinter-3.02-Universal.zip</string>
+		<string>https://us.evolis.com/sites/default/files/drivers/11267_187671_EvolisCardPinter-3.02-Universal.zip</string>
 	</dict>
     <key>MinimumVersion</key>
-    <string>0.5.1</string>
+    <string>1.0.1</string>
     <key>Process</key>
     <array>
         <dict>
@@ -30,10 +30,6 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
             <string>Unarchiver</string>
             <key>Arguments</key>
             <dict>
@@ -44,6 +40,10 @@
                 <key>purge_destination</key>
                 <true/>
             </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
         </dict>
     </array>
 </dict>
