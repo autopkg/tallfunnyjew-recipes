@@ -3,17 +3,16 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest HandbrakeCLI (command line interface tool) disk image.
-    Note: Code signature verification for Handbrake cannot be done at this time, as the application is not currently signed.</string>
-	<key>Identifier</key>
-	<string>com.github.tallfunnyjew.download.HandbrakeCLI</string>
+    <string>Downloads the latest HandbrakeCLI for macOS. Note: Code signature verification for Handbrake cannot be done at this time, as the application is not currently signed.</string>
+    <key>Identifier</key>
+    <string>com.github.tallfunnyjew.download.HandbrakeCLI</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>HandbrakeCLI</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>1.0.0</string>
+    <string>1.0.1</string>
     <key>Process</key>
     <array>
         <dict>
@@ -35,7 +34,7 @@
                 <key>url</key>
                 <string>https://handbrake.fr/%match%</string>
                 <key>re_pattern</key>
-                <string>(mirror.*?\.dmg)</string>
+                <string>href=\"(https.*?HandBrakeCLI.*?\.dmg)\"</string>
             </dict>
         </dict>
         <dict>
@@ -43,10 +42,10 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-                <key>filename</key>
-                <string>%NAME%.dmg</string>
                 <key>url</key>
-                <string>https://handbrake.fr/%match%</string>
+                <string>%match%</string>
+                <key>CHECK_FILESIZE_ONLY</key>
+                <true/>
             </dict>
         </dict>
         <dict>

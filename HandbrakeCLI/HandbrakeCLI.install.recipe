@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Installs the latest HandbrakeCLI tool from a disk image. CodeSignature FAIL as application isn't signed.</string>
+    <string>Downloads and installs the latest HandbrakeCLI for macOS. Note: Code signature verification for Handbrake cannot be done at this time, as the application is not currently signed.</string>
     <key>Identifier</key>
 	<string>com.github.tallfunnyjew.install.HandbrakeCLI</string>
     <key>Input</key>
     <dict/>
     <key>MinimumVersion</key>
-    <string>0.4.0</string>
+    <string>1.0.1</string>
     <key>ParentRecipe</key>
-	<string>com.github.tallfunnyjew.download.HandbrakeCLI</string>
+    <string>com.github.tallfunnyjew.download.HandbrakeCLI</string>
     <key>Process</key>
     <array>
         <dict>
@@ -28,6 +28,10 @@
                         <string>HandBrakeCLI</string>
                         <key>destination_path</key>
                         <string>/Applications/</string>
+                        <key>user</key>
+                        <string>root</string>
+                        <key>group</key>
+                        <string>admin</string>
                     </dict>
                 </array>
             </dict>
