@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of KeePassX.</string>
+    <string>Downloads the latest version of KeePassX for macOS. Note: Code signature verification for Handbrake cannot be done at this time, as the application is not currently signed.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.download.KeePassX</string>
 		<key>Input</key>
@@ -12,24 +12,18 @@
 			<string>KeePassX</string>
 		</dict>
 	<key>MinimumVersion</key>
-	<string>0.4.2</string>
+	<string>1.0.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
 		<key>Processor</key>
 		<string>URLTextSearcher</string>
-		<key>Comment</key>
-		<string>This processor permits downloading a URL with variables. Convenient if version numbers are in the name of the download but change over time.</string>
 		<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.keepassx.org/downloads/</string>
-				<key>Comment</key>
-				<string>The URL value calls the page where the download is found.</string>
+				<string>https://www.keepassx.org/downloads</string>
 				<key>re_pattern</key>
 				<string>"latest_version"&gt;Latest version: ([\d\.]+)&lt;</string>
-				<key>Comment</key>
-				<string>The re_pattern calls the variables as mentioned in the HTML code.</string>
 				<key>result_output_var_name</key>
 				<string>version</string>
 			</dict>
@@ -40,9 +34,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://www.keepassx.org/%version%/KeePassX-%version%.dmg</string>
+                <string>https://www.keepassx.org/releases/%version%/KeePassX-%version%.dmg</string>
                 <key>filename</key>
-                <string>%NAME%.dmg</string>
+                <string>%NAME%-%version%.dmg</string>
             </dict>
         </dict>
     </array>
