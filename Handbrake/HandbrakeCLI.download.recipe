@@ -16,36 +16,26 @@
     <key>Process</key>
     <array>
         <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://handbrake.fr/downloads2.php</string>
-                <key>re_pattern</key>
-                <string>(rotation.*?\.dmg)</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://handbrake.fr/%match%</string>
-                <key>re_pattern</key>
-                <string>href=\"(https.*?HandBrakeCLI.*?\.dmg)\"</string>
-            </dict>
-        </dict>
+		<key>Processor</key>
+		<string>URLTextSearcher</string>
+		<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://handbrake.fr/downloads2.php</string>
+				<key>re_pattern</key>
+				<string>&gt;Current Version: ([\d\.]+)&lt;</string>
+				<key>result_output_var_name</key>
+				<string>version</string>
+			</dict>
+		</dict>
+ 
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%match%</string>
-                <key>CHECK_FILESIZE_ONLY</key>
-                <true/>
+                <string>https://download.handbrake.fr/releases/%version%/HandBrakeCLI-%version%.dmg</string>
             </dict>
         </dict>
         <dict>
