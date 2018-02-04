@@ -18,14 +18,12 @@
     <key>Process</key>
     <array>
         <dict>
-            <key>Comment</key>
-			<string>Creates .pkg from the downloaded app.</string>
             <key>Processor</key>
             <string>AppPkgCreator</string>
 			<key>Arguments</key>
             <dict>
                 <key>app_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/*.app</string>
             </dict>
         </dict>
         <dict>
