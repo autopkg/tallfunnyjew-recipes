@@ -5,13 +5,13 @@
     <key>Description</key>
 	<string>Downloads the latest MakeMKV BETA version for macOS.</string>
 	<key>Identifier</key>
-	<string>com.github.tallfunnyjew.download.MakeMKV</string>
+	<string>com.github.tallfunnyjew.download.MakeMKVbeta</string>
 	<key>Comment</key>
 	<string>Thanks so much to Eric Holtam for his regex help</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>MakeMKV</string>
+        <string>MakeMKVbeta</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>
