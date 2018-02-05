@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest version of MusicBrainzPicard for macOS builds a pkg and installs it. Note: Code signature verification is unavailable, as the app is not currently signed.</string>
+    <key>Identifier</key>
+    <string>com.github.tallfunnyjew.install.MusicBrainzPicard</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Onyx</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>1.0.1</string>
+    <key>ParentRecipe</key>
+    <string>com.github.tallfunnyjew.pkg.MusicBrainzPicard</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>Installer</string>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of KeePassX for macOS and builds a pkg. Note: Code signature verification for Handbrake cannot be done at this time, as the application is not currently signed.</string>
+    <string>Downloads the latest version of KeePassX for macOS and builds a pkg. Note: Code signature verification is unavailable, as the app is not currently signed.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.pkg.KeePassX</string>
     <key>Input</key>
@@ -86,7 +86,7 @@
             <key>Arguments</key>
             <dict>
                 <key>path_list</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
             </dict>
         </dict>
     </array>

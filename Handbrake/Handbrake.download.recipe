@@ -28,7 +28,6 @@
 				<string>version</string>
 			</dict>
 		</dict>
- 
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
