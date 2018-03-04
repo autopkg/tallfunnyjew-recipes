@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Onyx client for MacOS 10.110 and builds a .pkg</string>
+    <string>Downloads the latest Onyx client for MacOS 10.10 and builds a .pkg</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.pkg.Onyx1010</string>
     <key>Input</key>
@@ -22,14 +22,14 @@
             <string>AppPkgCreator</string>
         </dict>
         <dict>
-            <key>Processor</key>
-            <string>PathDeleter</string>
-            <key>Arguments</key>
-            <dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+			<key>Arguments</key>
+			<dict>
 				<key>path_list</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>path_list</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/payload</string>
+				</array>
 			</dict>
         </dict>
     </array>
