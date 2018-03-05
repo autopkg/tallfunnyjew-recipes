@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Name Mangler Software for OSX.</string>
+    <string>Downloads the latest Name Mangler Software for macOS.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.download.NameMangler</string>
     <key>Input</key>
@@ -14,7 +14,7 @@
         <string>https://manytricks.com/download/namemangler</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>1.0.1</string>
     <key>Process</key>
     <array>
         <dict>
@@ -30,7 +30,14 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>EndOfCheckPhase</string>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/Name Mangler.app</string>
+                <key>requirement</key>
+                <string>anchor apple generic and identifier "com.manytricks.NameMangler" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = METK467GW2)</string>
+            </dict>
         </dict>
     </array>
 </dict>
