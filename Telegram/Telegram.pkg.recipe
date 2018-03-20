@@ -6,6 +6,11 @@
     <string>Downloads the latest version of Telegram for MacOS and builds a .pkg</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.pkg.Telegram</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Telegram</string>
+    </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>
     <key>ParentRecipe</key>
