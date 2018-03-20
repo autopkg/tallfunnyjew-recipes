@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Onyx client for MacOS 10.12 and builds a .pkg</string>
+    <string>Downloads the latest version of Telegram for MacOS and builds a .pkg</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.pkg.Onyx1012</string>
+    <string>com.github.tallfunnyjew.pkg.Telegram</string>
     <key>MinimumVersion</key>
     <string>1.0.1</string>
     <key>ParentRecipe</key>
-    <string>com.github.tallfunnyjew.download.Onyx1012</string>
+    <string>com.github.tallfunnyjew.download.Telegram</string>
     <key>Process</key>
     <array>
         <dict>
