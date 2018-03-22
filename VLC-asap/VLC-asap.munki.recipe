@@ -9,7 +9,7 @@ Please note that the values for supported_architectures in this
 recipe's pkginfo may be only evaluated accurately for early-generation
 Intel Macs as of Munki tools version 0.9.2.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.munki.VLC</string>
+    <string>com.github.tallfunnyjew.munki.VLC-asap</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
