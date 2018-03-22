@@ -7,7 +7,7 @@
 	<key>Identifier</key>
 	<string>com.github.tallfunnyjew.download.MakeMKVbeta</string>
 	<key>Comment</key>
-	<string>Thanks so much to Eric Holtam for his regex help</string>
+	<string>No CodeSig Verification as app is unsigned.</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -18,15 +18,15 @@
     <key>Process</key>
     <array>
         <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>http://www.makemkv.com/download/</string>
-                <key>re_pattern</key>
-                <string>(download\/makemkv_v[\d.]*_osx\.dmg)</string>
-        	</dict>
+		<key>Processor</key>
+		<string>URLTextSearcher</string>
+		<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://www.makemkv.com/download/</string>
+				<key>re_pattern</key>
+				<string>(download\/makemkv_v[\d.]*_osx.dmg)</string>
+			</dict>
         </dict>
         <dict>
             <key>Processor</key>

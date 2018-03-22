@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of KeePassX for macOS. Note: Code signature verification for Handbrake cannot be done at this time, as the application is not currently signed.</string>
+    <string>Downloads the latest version of KeePassX for macOS.</string>
     <key>Identifier</key>
     <string>com.github.tallfunnyjew.download.KeePassX</string>
-		<key>Input</key>
-		<dict>
-			<key>NAME</key>
-			<string>KeePassX</string>
-		</dict>
+    <key>Comment</key>
+	<string>No CodeSig Verification as app is unsigned.</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>KeePassX</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.1</string>
 	<key>Process</key>
