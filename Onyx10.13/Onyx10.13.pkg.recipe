@@ -2,28 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Downloads the latest Onyx client for macOS 10.13 and builds a .pkg</string>
-    <key>Identifier</key>
-    <string>com.github.tallfunnyjew.pkg.Onyx1013</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>Onyx</string>
-    </dict>
-    <key>MinimumVersion</key>
-    <string>1.0.1</string>
-    <key>ParentRecipe</key>
-    <string>com.github.tallfunnyjew.download.Onyx1013</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Processor</key>
-            <string>AppPkgCreator</string>
-        </dict>
-        <dict>
+	<key>Description</key>
+	<string>Downloads the latest Onyx client for macOS 10.13 and builds a .pkg</string>
+	<key>Identifier</key>
+	<string>com.github.tallfunnyjew.pkg.Onyx1013</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Onyx</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.tallfunnyjew.download.Onyx1013</string>
+	<key>Process</key>
+	<array>
+		<dict>
 			<key>Processor</key>
-			<string>PathDeleter</string>
+			<string>AppPkgCreator</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>path_list</key>
@@ -31,7 +29,9 @@
 					<string>%RECIPE_CACHE_DIR%/payload</string>
 				</array>
 			</dict>
-        </dict>
-    </array>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+		</dict>
+	</array>
 </dict>
 </plist>

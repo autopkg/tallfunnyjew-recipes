@@ -23,7 +23,9 @@
                 <key>url</key>
                 <string>https://evernote.com/products/skitch</string>
                 <key>re_pattern</key>
-                <string>(release\/Skitch-[\d.]*\.zip)</string>
+                <string>&lt;release\/Skitch-[\d.]*\.zip&gt;</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
         	</dict>
         </dict>
         <dict>
@@ -32,9 +34,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://evernote.s3.amazonaws.com/skitch/mac/%match%</string>
-                <key>filename</key>
-                <string>%NAME%.zip</string>
+                <string>https://evernote.s3.amazonaws.com/skitch/mac/%version%</string>
             </dict>
         </dict>
         <dict>

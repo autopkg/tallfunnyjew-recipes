@@ -37,7 +37,7 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-    <string>1.0.1</string>
+	<string>1.0.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.tallfunnyjew.download.Onyx1013</string>
 	<key>Process</key>
