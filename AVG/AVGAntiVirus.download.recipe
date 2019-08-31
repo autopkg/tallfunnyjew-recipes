@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>AVGAntiVirus</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://www.avg.com/ww-en/download-file-mac-av</string>
+        <string>https://www.avg.com/ww-en/download-file-mac-av</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>
@@ -27,6 +27,10 @@
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
         </dict>
         <dict>
             <key>Processor</key>
