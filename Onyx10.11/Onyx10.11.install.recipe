@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest Onyx client for macOS 10.11, builds a .pkg and then installs it.</string>
     <key>Identifier</key>
-    <string>com.github.tallfunnyjew.install.Onyx1013</string>
+    <string>com.github.tallfunnyjew.install.Onyx1011</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
