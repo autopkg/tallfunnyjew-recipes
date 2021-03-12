@@ -10,8 +10,6 @@
 	<string>com.github.autopkg.tallfunnyjew-recipes.pkg.OpenDNSUpdater</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.opendns.OpenDNS_Updater</string>
 		<key>NAME</key>
 		<string>OpenDNS Updater</string>
 	</dict>
@@ -22,8 +20,6 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
 			<key>Arguments</key>
 			<dict>
 				<key>archive_path</key>
@@ -33,15 +29,17 @@
 				<key>purge_destination</key>
 				<true/>
 			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
 			<key>Arguments</key>
 			<dict>
 				<key>app_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/OpenDNS Updater.app</string>
 			</dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
 		</dict>
 	</array>
 </dict>
