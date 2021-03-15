@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.makemkv.com/download/</string>
+                <string>https://www.makemkv.com/download/</string>
                 <key>re_pattern</key>
                 <string>(download\/makemkv_v[\d.]*_osx\.dmg)</string>
         	</dict>
@@ -32,7 +32,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.makemkv.com/%match%</string>
+                <string>https://www.makemkv.com/%match%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
