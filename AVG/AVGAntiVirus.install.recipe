@@ -32,7 +32,7 @@
 			<key>Arguments</key>
             <dict>
                 <key>input_plist_path</key>
-                <string>/Applications/%NAME%.app/Contents/Info.plist</string>
+                <string>/Applications/AVGAntivirus.app/Contents/Info.plist</string>
             </dict>
         </dict>
         <dict>
