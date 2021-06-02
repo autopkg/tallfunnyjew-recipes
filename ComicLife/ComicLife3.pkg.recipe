@@ -23,7 +23,7 @@
             <key>Arguments</key>
             <dict>
 				<key>app_path</key>
-				<string>"%RECIPE_CACHE_DIR%"/%NAME%/Comic Life 3.app</string>
+				<string>%RECIPE_CACHE_DIR%/"%NAME%"/Comic Life 3.app</string>
 			</dict>
         </dict>
         <dict>
