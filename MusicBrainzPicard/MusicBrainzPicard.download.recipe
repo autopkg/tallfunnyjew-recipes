@@ -15,6 +15,10 @@
     <string>1.0.1</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>DeprecationWarning</string>
+        </dict>
 		<dict>
 		<key>Processor</key>
 		<string>URLTextSearcher</string>
