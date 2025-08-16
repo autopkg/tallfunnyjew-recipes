@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>ComicLife3</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://downloads.plasq.com/comiclife3.zip</string>
+        <string>https://downloads.plasq.com/comiclife3.zip</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>

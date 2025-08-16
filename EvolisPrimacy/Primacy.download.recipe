@@ -30,7 +30,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://us.evolis.com/drivers-support/drivers-primacy-card-printer</string>
+                <string>https://us.evolis.com/drivers-support/drivers-primacy-card-printer</string>
                 <key>re_pattern</key>
                 <string>(https:\/\/us\.evolis\.com\/sites\/default\/files\/atoms\/files\/evolisprinterdriver-[\d.]*.pkg_.zip)</string>
                 <key>result_output_var_name</key>
