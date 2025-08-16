@@ -3,31 +3,40 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-	<string>Downloads the latest MusicBrainz Picard software for macOS. Note: Code signature verification unavailable, as app is not currently signed.</string>
-	<key>Identifier</key>
-	<string>com.github.tallfunnyjew.download.MusicBrainzPicard</string>
+    <string>Downloads the latest MusicBrainz Picard software for macOS. Note: Code signature verification unavailable, as app is not currently signed.</string>
+    <key>Identifier</key>
+    <string>com.github.tallfunnyjew.download.MusicBrainzPicard</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>MusicBrainzPicard</string>
     </dict>
-	<key>MinimumVersion</key>
-    <string>1.0.1</string>
+    <key>MinimumVersion</key>
+    <string>1.1</string>
     <key>Process</key>
     <array>
-		<dict>
-		<key>Processor</key>
-		<string>URLTextSearcher</string>
-		<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>https://picard.musicbrainz.org/downloads/</string>
-				<key>re_pattern</key>
-				<string>(MusicBrainz-Picard-[\d.]*dmg)</string>
-			</dict>
-		</dict>
         <dict>
-			<key>Processor</key>
+            <key>Processor</key>
+            <string>DeprecationWarning</string>
+            <key>Arguments</key>
+            <dict>
+                <key>warning_message</key>
+                <string>Consider switching to the MusicBrainz Picard recipes in the dataJAR-recipes repo. This recipe is deprecated and will be removed in the future.</string>
+            </dict>
+        </dict>
+        <dict>
+        <key>Processor</key>
+        <string>URLTextSearcher</string>
+        <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://picard.musicbrainz.org/downloads/</string>
+                <key>re_pattern</key>
+                <string>(MusicBrainz-Picard-[\d.]*dmg)</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
