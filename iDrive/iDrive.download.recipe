@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>iDrive</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://www.idrive.com/downloads/IDrive.dmg</string>
+        <string>https://www.idrive.com/downloads/IDrive.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.1</string>
