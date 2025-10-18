@@ -1,7 +1,9 @@
 # tallfunnyjew-recipes
 
-Greetings, local, national, international, and other solar system friends!
+**This repository will soon be [archived](https://github.com/autopkg/tallfunnyjew-recipes/issues/37) and its contents will be removed.**
 
-I hope you'll enjoy these recipes. I try to keep them up-to-date to the best of my abilities. I update and improve at least once a year, even for the legacy recipes. IF I can. Please feel free to reach out if you have questions and/or would like updates. 
+The [commit history](https://github.com/autopkg/tallfunnyjew-recipes/commits/master), [issues](https://github.com/autopkg/tallfunnyjew-recipes/issues?q=is%3Aissue), and [pull requests](https://github.com/autopkg/tallfunnyjew-recipes/pulls?q=is%3Apr) are still available for reference, but no future changes are planned.
 
-info [AT] helpful software [DOT] net
+To remove this repository from your local AutoPkg setup, run:
+
+    autopkg repo-delete tallfunnyjew-recipes
